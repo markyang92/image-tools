@@ -27,7 +27,7 @@ check-license:
 
 .PHONY: tool
 tool:
-	go build -ldflags "-X main.gitCommit=${COMMIT}" -o oci-image-tool ./cmd/oci-image-tool
+	go build -ldflags "-X main.gitCommit=${COMMIT} -buildmode=pie" -o oci-image-tool ./cmd/oci-image-tool
 
 
 all: tool man
